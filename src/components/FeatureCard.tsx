@@ -13,11 +13,11 @@ function FeatureCard({ title, description, icon: Icon }: FeatureCardProps) {
       <CardHeader>
         <div className="flex items-center gap-3 mb-2">
           <Icon className="text-blue-500 w-6 h-6" />
-          <CardTitle className="text-zinc-300 font-['Inter',sans-serif] font-bold">
+          <CardTitle className="text-zinc-300 text-xl font-['Inter',sans-serif] font-bold">
             {title}
           </CardTitle>
         </div>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="text-lg">{description}</CardDescription>
       </CardHeader>
     </Card>
   );
