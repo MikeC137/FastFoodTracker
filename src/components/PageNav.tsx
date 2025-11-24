@@ -7,15 +7,29 @@ function PageNav() {
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <Logo />
         <ul className="md:flex flex items-center gap-4 text-zinc-300 font-['Inter',sans-serif]">
-          <li
-            className={
-              "bg-blue-600 hover:bg-blue-800 p-2 rounded-lg transition-colors"
-            }
-          >
-            <NavLink to="/dashboard">DASHBOARD</NavLink>
+          <li>
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                `hover:text-white p-2 rounded-lg transition-colors ${
+                  isActive ? "text-white bg-blue-600" : "text-zinc-300"
+                }`
+              }
+            >
+              DASHBOARD
+            </NavLink>
           </li>
-          <li className={"hover:bg-green-700 p-2 rounded-lg transition-colors"}>
-            <NavLink to="/history">HISTORY</NavLink>
+          <li>
+            <NavLink
+              to="/history"
+              className={({ isActive }) =>
+                `hover:text-white p-2 rounded-lg transition-colors ${
+                  isActive ? "text-white bg-blue-600" : "text-zinc-300"
+                }`
+              }
+            >
+              HISTORY
+            </NavLink>
           </li>
         </ul>
       </div>
